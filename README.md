@@ -113,13 +113,15 @@ A factory (`PERC20Factory`) is **recommended** but not required by the standard 
 | `Mint` / `Burn` | Public supply changes |
 | `Perc20Created` | New asset registration |
 
-## File in this repository
+## Files in this repository
 
 ```
-contracts/ptoken/PERC20.sol   ← reference asset contract (this repo)
+contracts/ptoken/PERC20.sol   ← minimal reference asset contract (root)
+perc20-reference/             ← full contract stack + audit reports (snapshot)
+docs/                         ← PDF audit reports (beta rounds)
 ```
 
-`PERC20.sol` imports `OrchardVerifier`, `IPERC20`, and `IEndpointCore` from the full reference implementation. It does **not** compile in isolation; use the complete PERC20 repository for build, test, and deployment.
+The root `PERC20.sol` imports `OrchardVerifier`, `IPERC20`, and `IEndpointCore` from the full reference implementation. It does **not** compile in isolation; use [`perc20-reference/`](./perc20-reference/) for the complete on-chain stack, or the [PERC20](https://github.com/PERC20Labs/PERC20) development repository for build, test, and deployment.
 
 ## Status
 
